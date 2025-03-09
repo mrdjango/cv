@@ -5,59 +5,350 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Mostafa Shahbazi Dill</title>
     <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
+            width: 190mm;
+            padding: 15mm 10mm;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            min-height: 297mm;
         }
         h1 {
-            font-size: 2em;
-            margin-bottom: 0;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 5px;
         }
         .section-title {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            border-bottom: 2px solid turquoise;
+            font-size: 1.6em;
+            margin: 25px 0 15px;
+            border-bottom: 2px solid #3498db;
             padding-bottom: 5px;
-            color: turquoise;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+        }
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background-color: #3498db;
+            margin-right: 10px;
+            border-radius: 2px;
         }
         .contact-info {
-            margin-bottom: 20px;
+            margin: 15px 0;
+            padding: 10px 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+        .contact-info p {
+            margin: 5px 0;
         }
         .contact-info a {
-            color: #000;
+            color: #3498db;
             text-decoration: none;
+            transition: color 0.2s ease;
+            font-weight: 500;
         }
         .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .experience, .education, .skills, .certificates, .projects {
-            margin-bottom: 20px;
+            color: #2980b9;
         }
         .experience-item, .education-item, .project-item {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            background-color: #f8f9fa;
+            border-radius: 0 5px 5px 0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .experience-item:hover, .education-item:hover, .project-item:hover {
+            transform: translateX(5px);
+            box-shadow: -5px 0 10px rgba(52, 152, 219, 0.1);
         }
         .experience-item h3, .education-item h3, .project-item h3 {
             margin: 0;
             font-size: 1.2em;
+            color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .experience-item span, .education-item span, .project-item span {
+        .date-range {
             font-size: 0.9em;
-            color: #555;
+            color: #666;
+            font-weight: normal;
+        }
+        .experience-item span {
+            font-size: 0.95em;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 5px 0;
+            flex-wrap: nowrap;
+        }
+        .location-remote {
+            color: #666;
+            font-size: 0.8em !important;
+            background-color: #e9ecef;
+            padding: 0.5px 1px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        .location-info {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .skills-list, .certificates-list {
             list-style-type: none;
             padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
         }
         .skills-list li, .certificates-list li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            padding: 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border-left: 2px solid #3498db;
+        }
+        .profile-summary {
+            margin: 20px 0;
+            text-align: justify;
+            line-height: 1.7;
+        }
+        .profile-summary p {
+            margin: 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+        .keywords-container {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+        .keywords-title {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-weight: 600;
+        }
+        .keywords-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+        }
+        .keyword {
+            background-color: #e8f4fc;
+            color: #2c3e50;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            border: 1px solid #d1e6f6;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        @media print {
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            .container {
+                width: 190mm;
+                margin: 0 auto;
+                padding: 15mm 10mm;
+                box-shadow: none;
+            }
+            .experience-item, .education-item, .project-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .section-title {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+            .experience-item:hover, .education-item:hover, .project-item:hover {
+                transform: none;
+                box-shadow: none;
+            }
+            a {
+                text-decoration: none !important;
+                color: #3498db !important;
+            }
+            .location-remote {
+                background-color: #e9ecef !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        .education-item span, .project-item span {
+            font-size: 0.95em;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 5px 0;
+            flex-wrap: nowrap;
+        }
+        .skills-list ul {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 15px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .skills-list ul li {
+            background: none;
+            border-left: none;
+            padding-left: 0;
+            position: relative;
+        }
+        .skills-list ul li:before {
+            content: "•";
+            position: absolute;
+            left: -12px;
+            color: #3498db;
+        }
+        .certificates-list {
+            display: block;
+        }
+        .certificates-list li {
+            margin-bottom: 15px;
+        }
+        .certificates-list h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+        /* Print button */
+        .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background-color: #2980b9;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+        /* Skills section improvements */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .skills-category {
+            margin-bottom: 20px;
+        }
+        
+        .skills-category h3 {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin: 0 0 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #3498db;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+        
+        .skill-item {
+            background-color: #f8f9fa;
+            border-left: 2px solid #3498db;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        
+        .skill-item.featured {
+            background-color: #e8f4fc;
+            border-left-width: 3px;
+        }
+        
+        .skill-item .years {
+            font-size: 0.85em;
+            color: #666;
+            margin-left: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
+    <script>
+        function printResume() {
+            window.print();
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -71,38 +362,76 @@
         <div class="profile-summary">
             <h2 class="section-title">Profile Summary</h2>
             <p>A specialized Backend Developer and AI Engineer with over 6 years of expertise in building robust Python-based systems and AI solutions. Currently pursuing a Master's in Computer Science with focus on Artificial Intelligence, bringing academic depth to practical AI implementations. Extensive experience in developing and deploying machine learning models, deep neural networks, and real-time data processing systems. Proven expertise in architecting scalable backend infrastructures using Django, FastAPI, and WebSocket technologies, with a strong focus on high-performance distributed systems. Skilled in implementing AI-powered solutions including computer vision systems, predictive models, and NLP applications. Demonstrates proficiency in backend best practices including asynchronous programming, microservices architecture, and DevOps workflows with Docker and Kubernetes. Successfully led technical teams in delivering complex AI integrations and backend systems for enterprise-scale applications.</p>
+            
+            <div class="keywords-container">
+                <div class="keywords-title">Keywords</div>
+                <div class="keywords-list">
+                    <span class="keyword">Artificial Intelligence</span>
+                    <span class="keyword">Machine Learning</span>
+                    <span class="keyword">Deep Learning</span>
+                    <span class="keyword">Computer Vision</span>
+                    <span class="keyword">Natural Language Processing</span>
+                    <span class="keyword">AI Integration</span>
+                    <span class="keyword">AI Solutions</span>
+                    <span class="keyword">AI Applications</span>
+                    <span class="keyword">Data Processing</span>
+                    <span class="keyword">Backend Development</span>
+                    <span class="keyword">Team Leadership</span>
+                    <span class="keyword">Microservices</span>
+                    <span class="keyword">Real-time Systems</span>
+                    <span class="keyword">Distributed Systems</span>
+                    <span class="keyword">Database Design</span>
+                    <span class="keyword">Cloud Computing</span>
+                    <span class="keyword">DevOps</span>
+                    <span class="keyword">Containerization</span>
+                    <span class="keyword">Software Architecture</span>
+                    <span class="keyword">Blockchain Technologies</span>
+                    <span class="keyword">System Integration</span>
+                </div>
+            </div>
         </div>
 
         <div class="experience">
             <h2 class="section-title">Work Experience</h2>
+            
             <div class="experience-item">
-
-                <div class="experience-item">
-                    <h3>Technical Lead</h3>
-                    <span>Intelligence Game Hub, Tehran, Iran | November 2024 – Present</span>
-                    <ul>
-                        <li>Designing and developing an AI-powered gaming console using Raspberry Pi and deep learning models.</li>
-                        <li>Implemented motion recognition systems powered by computer vision to analyze player movements in real-time.</li>
-                        <li>Optimized image processing workflows and integrated predictive models into interactive gaming environments.</li>
-                        <li>Managed data inputs from sensors and cameras, enhancing system responsiveness and accuracy.</li>
-                        <li>Advanced the use of deep neural networks and multimedia data processing for enhanced user interaction.</li>
-                    </ul>
-                </div>
+                <h3>Technical Lead</h3>
+                <span>
+                    <span class="location-info">Intelligence Game Hub, Tehran, Iran</span>
+                    <span class="location-info">| December 2024 – Present</span>
+                </span>
+                <ul>
+                    <li>Designing and developing an AI-powered gaming console using Raspberry Pi and deep learning models.</li>
+                    <li>Implemented motion recognition systems powered by computer vision to analyze player movements in real-time.</li>
+                    <li>Optimized image processing workflows and integrated predictive models into interactive gaming environments.</li>
+                    <li>Managed data inputs from sensors and cameras, enhancing system responsiveness and accuracy.</li>
+                    <li>Advanced the use of deep neural networks and multimedia data processing for enhanced user interaction.</li>
+                </ul>
+            </div>
     
-                <div class="experience-item">
-                    <h3>Backend Team Lead | AI Software Engineer</h3>
-                    <span>Entropy Index, Los Angeles, USA <span style="color: gray; font-size: 0.8em;">(Remote)</span> | August 2024 – Present </span>
-                    <ul>
-                        <li>Leading the backend team in developing and deploying AI solutions to address complex business challenges.</li>
-                        <li>Designed and implemented predictive models using machine learning and deep learning techniques.</li>
-                        <li>Developed AI frameworks and tools to identify patterns and improve decision-making.</li>
-                        <li>Integrated NLP models for enhanced data analysis and user interaction.</li>
-                        <li>Collaborated with cross-functional teams to deploy AI-based solutions into production environments.</li>
-                    </ul>
-                </div>
+            <div class="experience-item">
+                <h3>Backend Team Lead | AI Software Engineer</h3>
+                <span>
+                    <span class="location-info">Entropy Index, Los Angeles, USA</span>
+                    <span class="location-remote">(Remote)</span>
+                    <span class="location-info">| August 2024 – Present</span>
+                </span>
+                <ul>
+                    <li>Leading the backend team in developing and deploying AI solutions to address complex business challenges.</li>
+                    <li>Designed and implemented predictive models using machine learning and deep learning techniques.</li>
+                    <li>Developed AI frameworks and tools to identify patterns and improve decision-making.</li>
+                    <li>Integrated NLP models for enhanced data analysis and user interaction.</li>
+                    <li>Collaborated with cross-functional teams to deploy AI-based solutions into production environments.</li>
+                </ul>
+            </div>
 
+            <div class="experience-item">
                 <h3>Backend Team Lead</h3>
-                <span>cube10.io, London, UK <span style="color: gray; font-size: 0.8em;">(Remote)</span> | November 2023 – December 2024</span>
+                <span>
+                    <span class="location-info">cube10.io, London, UK</span>
+                    <span class="location-remote">(Remote)</span>
+                    <span class="location-info">| November 2023 – December 2024</span>
+                </span>
                 <ul>
                     <li>Provide technical guidance and mentorship to team members.</li>
                     <li>Ensure best practices in coding, testing, and architecture.</li>
@@ -154,7 +483,10 @@
             </div>
             <div class="experience-item">
                 <h3>Technical Expert (IT Admin)</h3>
-                <span>Rah Saze Institute, Yasooj, Iran | February 2019 – April 2021</span>
+                <span>
+                    <span class="location-info">Rah Saze Institute, Yasooj, Iran</span>
+                    <span class="location-info">| February 2019 – April 2021</span>
+                </span>
                 <ul>
                     <li>Provided technical support and managed IT infrastructure.</li>
                 </ul>
@@ -165,49 +497,90 @@
             <h2 class="section-title">Education</h2>
             <div class="education-item">
                 <h3>Master of Computer Science (Data Mining and Artificial Intelligence)</h3>
-                <span>Tarbiat Modares University, Tehran, Iran | 2023 – Present</span>
+                <span>
+                    <span class="location-info">Tarbiat Modares University, Tehran, Iran</span>
+                    <span class="location-info">| 2023 – Present</span>
+                </span>
             </div>
             <div class="education-item">
                 <h3>Bachelor of Civil Engineering</h3>
-                <span>Azad University, Gachsaran, Iran | 2015 – 2019</span>
+                <span>
+                    <span class="location-info">Azad University, Gachsaran, Iran</span>
+                    <span class="location-info">| 2015 – 2019</span>
+                </span>
             </div>
         </div>
 
         <div class="skills">
             <h2 class="section-title">Skills</h2>
-            <h3>Programming Languages & Frameworks</h3>
-            <ul class="skills-list">
-                <li>Languages:</li>
-                <ul>
-                    <li>Python (4+ years)</li>
-                    <li>Rust (less than 1 year)</li>
-                </ul>
-                <li>Frameworks:</li>
-                <ul>
-                    <li>Django Framework (3+ years)</li>
-                    <li>Websockets (channels/Tornado)</li>
-                    <li>FastAPI, Flask</li>
-                </ul>
-            </ul>
-            <h3>Tools & Technologies</h3>
-            <ul class="skills-list">
-                <li>Asynchronous programming</li>
-                <li>Celery, rabbitMQ</li>
-                <li>Linux, Docker, Kubernetes</li>
-                <li>Machine Learning (AI)</li>
-                <ul>
-                    <li>Deep Learning, Reinforcement Learning, Supervised Learning, Unsupervised Learning</li>
-                    <li>Tools: PyTorch, Matplotlib, Scikit-learn, Pandas, Numpy</li>
-                </ul>
-                <li>Database Management (SQL/NoSQL)</li>
-                <ul>
-                    <li>PostgreSQL, MongoDB, Redis, RethinkDB</li>
-                </ul>
-                <li>blockchain and cryptocurrencies (knowledge and experience)</li>
-                <ul>
-                    <li>communicate with blockchain networks (SEGWIT, ERC20, TRC20, BEP20)</li>
-                </ul>
-            </ul>
+            
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item featured">Python <span class="years">(5+ years)</span></div>
+                        <div class="skill-item">Rust <span class="years">(< 1 year)</span></div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item featured">Django <span class="years">(5+ years)</span></div>
+                        <div class="skill-item">Django REST Framework</div>
+                        <div class="skill-item">WebSockets (Channels/Tornado)</div>
+                        <div class="skill-item">FastAPI</div>
+                        <div class="skill-item">Flask</div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Deep Learning</div>
+                        <div class="skill-item">Reinforcement Learning</div>
+                        <div class="skill-item">Supervised Learning</div>
+                        <div class="skill-item">Unsupervised Learning</div>
+                        <div class="skill-item">PyTorch</div>
+                        <div class="skill-item">Scikit-learn</div>
+                        <div class="skill-item">Pandas</div>
+                        <div class="skill-item">NumPy</div>
+                        <div class="skill-item">Matplotlib</div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>DevOps & Infrastructure</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Docker</div>
+                        <div class="skill-item">Kubernetes</div>
+                        <div class="skill-item">CI/CD</div>
+                        <div class="skill-item">Linux</div>
+                        <div class="skill-item">AWS</div>
+                        <div class="skill-item">Sentry</div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Database Management</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">PostgreSQL</div>
+                        <div class="skill-item">MongoDB</div>
+                        <div class="skill-item">Redis</div>
+                        <div class="skill-item">RethinkDB</div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3>Other Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Asynchronous Programming</div>
+                        <div class="skill-item">Celery</div>
+                        <div class="skill-item">RabbitMQ</div>
+                        <div class="skill-item">Blockchain Networks (SEGWIT, ERC20, TRC20, BEP20)</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -260,5 +633,6 @@
             </div>
         </div>
     </div>
+    <button class="print-button" onclick="printResume()">Print Resume</button>
 </body>
 </html>
