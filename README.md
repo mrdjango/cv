@@ -6,7 +6,7 @@ LinkedIn: [mostafa-shahbazi](https://www.linkedin.com/in/mostafa-shahbazi/) | Gi
 
 ## Profile Summary
 
-A specialized Backend Developer and AI Engineer with over 8 years of expertise in building robust Python-based systems and AI solutions (on AWS infrastructure and services). Currently pursuing a Master's in Computer Science with a focus on Artificial Intelligence, bringing academic depth to practical AI implementations. Extensive experience in developing and deploying machine learning models, deep neural networks, and real-time data processing systems. Proven expertise in architecting scalable backend infrastructures using Django, FastAPI, and WebSocket technologies, with a strong focus on high-performance distributed systems. Skilled in implementing AI-powered solutions including computer vision systems, predictive models, and NLP applications. Proficient in backend best practices including asynchronous programming, microservices architecture, and DevOps workflows with Docker and Kubernetes. Successfully led technical teams in delivering complex AI integrations and backend systems for enterprise-scale applications.
+A specialized Backend Developer and AI Engineer with over 8 years of expertise in building robust Python-based systems and AI solutions (on AWS infrastructure and services). Currently pursuing a Master's in Computer Science with a focus on Artificial Intelligence, bringing academic depth to practical AI implementations. Extensive experience in developing and deploying machine learning models, deep neural networks, and real-time data processing systems. Proven expertise in architecting scalable backend infrastructures using Django, FastAPI, and WebSocket technologies, with a strong focus on high-performance distributed systems. Skilled in implementing AI-powered solutions including computer vision systems, predictive models, and NLP applications. Proficient in backend best practices including asynchronous programming, microservices architecture, and DevOps workflows with Docker and Kubernetes. Experienced in integrating AWS cloud AI services and cloud-native deployment pipelines to deliver resilient, production-ready solutions. Successfully led technical teams in delivering complex AI integrations and backend systems for enterprise-scale applications.
 
 ### Keywords
 
@@ -27,6 +27,19 @@ A specialized Backend Developer and AI Engineer with over 8 years of expertise i
 - Optimized image processing workflows and integrated predictive models into interactive gaming environments.
 - Managed data inputs from sensors and cameras, enhancing system responsiveness and accuracy.
 - Advanced the use of deep neural networks and multimedia data processing for enhanced user interaction.
+
+### AI Software Engineer & Data Scientist
+
+**Speco AI, Washington, United States (Remote)** | September 2024 – April 2026
+
+- Architected and delivered backend and AI solutions using Python, Django, and cloud-based AI services.
+- Integrated AWS cloud infrastructure and AI/ML APIs to build scalable, production-ready systems.
+- Designed and maintained scalable microservices, RESTful APIs, and data processing pipelines.
+- Conducted exploratory data analysis, feature engineering, and data mining to extract actionable insights from large-scale structured and unstructured datasets.
+- Developed RAG-based solutions encompassing document retrieval, vector search, and multimodal pipelines across image and NLP domains.
+- Engineered end-to-end multimodal RAG workflows combining computer vision and natural language processing over structured and unstructured data.
+- Applied DevOps best practices including Docker containerization, CI/CD automation, and infrastructure as code.
+- Collaborated with cross-functional stakeholders to deploy and monitor cloud-native AI systems in production.
 
 ### Backend Team Lead
 
