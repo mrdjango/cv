@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic CV — Mostafa Shahbazi Dil</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Palatino', 'Georgia', 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.55;
+            color: #1a1a1a;
+            background-color: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        .container {
+            padding: 18mm 16mm 12mm 16mm;
+            background-color: white;
+        }
+
+        /* ── Header ── */
+        .header {
+            text-align: center;
+            margin-bottom: 10mm;
+            padding-bottom: 4mm;
+            border-bottom: 1.2pt solid #2c3e50;
+        }
+        .header h1 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 0.4px;
+            margin-bottom: 3mm;
+            font-variant: small-caps;
+        }
+        .header .contact-line {
+            font-size: 0.8em;
+            color: #444;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4mm;
+        }
+        .header .contact-line a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        /* ── Section Titles ── */
+        .section-title {
+            font-size: 0.95em;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin: 7mm 0 3.5mm 0;
+            border-bottom: 0.6pt solid #7f8c8d;
+            padding-bottom: 1.2mm;
+            font-variant: small-caps;
+        }
+
+        /* ── Research Interests ── */
+        .research-interests {
+            font-size: 0.88em;
+            line-height: 1.6;
+            margin-bottom: 1mm;
+            text-align: justify;
+        }
+
+        /* ── Education ── */
+        .entry {
+            margin-bottom: 4.5mm;
+            page-break-inside: avoid;
+        }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+        .entry-title {
+            font-size: 0.9em;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+        .entry-dates {
+            font-size: 0.78em;
+            color: #555;
+            white-space: nowrap;
+        }
+        .entry-subtitle {
+            font-size: 0.82em;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 1.2mm;
+        }
+        .entry-detail {
+            font-size: 0.8em;
+            color: #555;
+            margin-bottom: 0.6mm;
+        }
+        .entry ul {
+            list-style-type: disc;
+            padding-left: 5mm;
+            margin: 1.5mm 0 0 0;
+        }
+        .entry ul li {
+            font-size: 0.82em;
+            margin-bottom: 0.8mm;
+            line-height: 1.45;
+            text-align: justify;
+        }
+
+        /* ── Publications ── */
+        .pub-item {
+            margin-bottom: 3.5mm;
+            page-break-inside: avoid;
+        }
+        .pub-authors {
+            font-size: 0.82em;
+        }
+        .pub-authors .self {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        /* ── Skills ── */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5mm;
+            margin-bottom: 2mm;
+        }
+        .skill-group {
+            font-size: 0.8em;
+            flex: 1 1 45%;
+        }
+        .skill-group strong {
+            font-size: 0.88em;
+            color: #1a1a1a;
+        }
+
+
+        /* ── Print ── */
+        @media print {
+            .print-btn { display: none !important; }
+            html, body {
+                width: 210mm;
+                margin: 0;
+                padding: 0;
+                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .container {
+                padding: 16mm 14mm 10mm 14mm;
+            }
+            .entry, .pub-item {
+                break-inside: avoid;
+            }
+            .section-title {
+                break-after: avoid;
+            }
+            a {
+                text-decoration: none !important;
+                color: #1a1a1a !important;
+            }
+        }
+
+        /* ── Print Button ── */
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .print-btn:hover {
+            background: #1a2a3a;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+            .skills-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+    <script>
+        function printCV() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ═══════════════ HEADER ═══════════════ -->
+        <div class="header">
+            <h1>Mostafa Shahbazi Dil</h1>
+            <div class="contact-line">
+                <span>📧 <a href="mailto:mostafas105@gmail.com">mostafas105@gmail.com</a></span>
+                <span>📞 (+98) 921 714 9545</span>
+                <span>🌐 Tehran, Iran</span>
+            </div>
+            <div class="contact-line" style="margin-top:1.5mm;">
+                <span><a href="https://www.linkedin.com/in/mostafa-shahbazi/">LinkedIn</a></span>
+                <span><a href="https://github.com/mrdjango">GitHub</a></span>
+            </div>
+        </div>
+
+        <!-- ═══════════════ RESEARCH INTERESTS ═══════════════ -->
+        <h2 class="section-title">Research Interests</h2>
+        <p class="research-interests">
+            Computer Vision · Deep Learning · Image Generation &amp; Synthesis · Object Detection &amp; Segmentation · 
+            Pose Estimation &amp; Human Activity Recognition · Image Restoration &amp; Enhancement · 
+            Diffusion Models &amp; Generative AI · Multimodal Learning &amp; Vision-Language Models · 
+            Edge AI &amp; Efficient On-Device Vision · Retrieval-Augmented Generation (RAG) · Representation Learning
+        </p>
+
+        <!-- ═══════════════ EDUCATION ═══════════════ -->
+        <h2 class="section-title">Education</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">M.Sc. in Computer Science — Data Mining &amp; Artificial Intelligence</span>
+                <span class="entry-dates">2023 – 2026</span>
+            </div>
+            <div class="entry-subtitle">Tarbiat Modares University, Tehran, Iran</div>
+            <div class="entry-detail">Relevant Coursework: Machine Learning, Deep Learning, Computer Vision, Data Mining, Natural Language Processing, 
+                Statistical Pattern Recognition, Optimization Methods, Advanced Algorithms, Complex Networks</div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">B.Sc. in Civil Engineering</span>
+                <span class="entry-dates">2015 – 2019</span>
+            </div>
+            <div class="entry-subtitle">Azad University, Iran</div>
+        </div>
+
+        <!-- ═══════════════ PUBLICATIONS ═══════════════ -->
+        <h2 class="section-title">Publications</h2>
+
+        <div class="pub-item">
+            <div class="pub-authors"><span class="self">Mostafa Shahbazi Dil</span>, Mohammad Mahmoudabadi, Mansoor Rezghi. &#8220;DuoDiT: A Parameter-Efficient Dual-Stream Architecture for High-Resolution Image Generation in Diffusion Transformers&#8221;. <em>Multimedia Tools and Applications</em>. Springer, Submitted 2026.</div>
+        </div>
+
+        <!-- ═══════════════ RESEARCH PROJECTS ═══════════════ -->
+        <h2 class="section-title">Research Projects</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Image Denoising via SVD Reconstruction &amp; Local Thresholding</span>
+            </div>
+            <div class="entry-detail">
+                Investigated noise removal techniques through singular value decomposition (SVD) and local thresholding for image reconstruction. 
+                <a href="https://github.com/mrdjango/Experimental-Image-Denoising-using-SVD-Reconstruction-and-Local-Thresholding">[GitHub]</a>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Single Image Dehazing with Convolutional Vision Transformer (CVT)</span>
+            </div>
+            <div class="entry-detail">
+                Developed a deep learning model combining convolutional neural networks with vision transformer self-attention mechanisms for single image dehazing. 
+                Trained on the RESIDE-6K benchmark dataset with paired hazy/clear images; evaluated using PSNR and SSIM metrics. 
+                Implemented in PyTorch with custom data loading, augmentation pipelines, and upsampling-based reconstruction.
+                <a href="https://github.com/mrdjango/CVT-Dehazer">[GitHub]</a>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Multi-Layer Perceptron with Modular Optimization</span>
+            </div>
+            <div class="entry-detail">
+                Implemented a configurable MLP framework with layer stacking, various normalization techniques (BatchNorm, LayerNorm), 
+                regularization methods (Dropout, L1/L2), and multiple optimizer strategies. 
+                <a href="https://github.com/mrdjango/MLP-with-optimizer">[GitHub]</a>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Convolutional Neural Networks: Kernel-Based Image Processing</span>
+            </div>
+            <div class="entry-detail">
+                Implemented CNN convolution operations from first principles using NumPy; demonstrated edge detection and 
+                image blur through custom kernel filters on benchmark datasets. 
+                <a href="https://github.com/mrdjango/Convolution-Kernel-Blur-Image">[GitHub]</a>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Unsupervised Foreground–Background Segmentation via K-Means Clustering</span>
+            </div>
+            <div class="entry-detail">
+                Applied K-means clustering for unsupervised image segmentation, separating foreground objects 
+                from background scenes without labeled training data. 
+                <a href="https://github.com/mrdjango/Separate-Foreground-Background-Clustering.git">[GitHub]</a>
+            </div>
+        </div>
+
+        <!-- ═══════════════ RESEARCH EXPERIENCE ═══════════════ -->
+        <h2 class="section-title">Research Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">AI Research Engineer</span>
+                <span class="entry-dates">Sep 2024 – Apr 2026 · 1 yr 8 mos</span>
+            </div>
+            <div class="entry-subtitle">Speco AI — Washington, United States (Remote)</div>
+            <ul>
+                <li>Conducted research and development on retrieval-augmented generation (RAG) architectures, integrating vector search and multimodal data processing for enterprise-scale AI systems, with ElasticSearch for hybrid lexical-semantic retrieval and large-scale document indexing.</li>
+                <li>Designed and implemented multimodal pipelines combining computer vision (object detection, image captioning, visual question answering) and natural language processing over structured and unstructured corpora.</li>
+                <li>Fine-tuned large vision-language models and embedding models using parameter-efficient techniques (LoRA, QLoRA) and instruction tuning for domain-specific multimodal retrieval, visual grounding, and semantic understanding.</li>
+                <li>Performed exploratory data analysis, feature engineering, and knowledge discovery on large-scale heterogeneous datasets to inform model architecture decisions.</li>
+                <li>Architected cloud-native AI/ML microservices on AWS infrastructure, applying containerization and CI/CD best practices for reproducible research deployment; developed performance-critical data preprocessing components in Rust for high-throughput ingestion pipelines.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Technical Lead — AI &amp; Computer Vision</span>
+                <span class="entry-dates">Dec 2024 – Present</span>
+            </div>
+            <div class="entry-subtitle">Intelligence Game Hub — Tehran, Iran (Contract, Part-time)</div>
+            <ul>
+                <li>Leading research and development of AI-powered interactive systems utilizing deep neural networks on edge devices (Raspberry Pi, Orange Pi), with ONNX and TensorRT for model optimization and deployment.</li>
+                <li>Performing hardware-aware model design and selection—benchmarking and matching neural network architectures to resource-constrained embedded platforms including ESP32, Raspberry Pi, and Orange Pi—balancing inference throughput, memory budget, and power consumption against task-specific accuracy requirements.</li>
+                <li>Designing real-time human pose estimation, motion recognition, and gesture classification pipelines using OpenCV, MediaPipe, and PyTorch for interactive gaming and HCI applications.</li>
+                <li>Implementing object detection (YOLO) and instance segmentation models—including SAM (Segment Anything Model) for zero-shot segmentation and mask generation—for real-time scene understanding and player tracking.</li>
+                <li>Applying post-training quantization (INT8/FP16) and weight pruning to vision-language models, achieving significant reductions in inference latency and memory footprint while preserving task accuracy for deployment on edge devices.</li>
+                <li>Optimizing multimedia data processing pipelines with predictive modeling and temporal action detection for enhanced human-computer interaction.</li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════ INDUSTRY RESEARCH EXPERIENCE ═══════════════ -->
+        <h2 class="section-title">Applied Research &amp; Industry Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Backend Team Lead — Data Systems &amp; AI Integration</span>
+                <span class="entry-dates">Nov 2023 – Dec 2024</span>
+            </div>
+            <div class="entry-subtitle">cube10.io — London, UK (Remote)</div>
+            <ul>
+                <li>Provided technical leadership for backend and AI integration projects, ensuring rigorous software engineering practices.</li>
+                <li>Designed high-performance distributed systems and RESTful APIs for data-intensive applications deployed on Kubernetes.</li>
+                <li>Established CI/CD pipelines, monitoring infrastructure (Grafana, Sentry), and containerized deployment strategies.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Backend Developer — Data &amp; Blockchain Systems</span>
+                <span class="entry-dates">Apr 2022 – Oct 2023</span>
+            </div>
+            <div class="entry-subtitle">onefinex.com (Cryptocurrency Trading Platform) — Tehran, Iran</div>
+            <ul>
+                <li>Developed real-time trading engines with order-matching algorithms, high-frequency data caching (Redis), and WebSocket-based streaming analytics.</li>
+                <li>Implemented automated risk management and fraud detection modules processing high-volume transactional data.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Backend Developer — Real-Time Data Analytics</span>
+                <span class="entry-dates">Feb 2018 – Sep 2022 · 4 yrs 8 mos</span>
+            </div>
+            <div class="entry-subtitle">TopKenz (Digital Currency Exchange) — Tehran, Iran</div>
+            <ul>
+                <li>Built real-time data processing and analytics systems using Pandas, NumPy, WebSockets, and Celery for large-scale user behavior analysis.</li>
+                <li>Designed and maintained PostgreSQL and MongoDB data stores for high-throughput transactional and analytical workloads.</li>
+            </ul>
+        </div>
+
+        <!-- ═══════════════ TEACHING & MENTORING ═══════════════ -->
+        <h2 class="section-title">Teaching &amp; Mentoring</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Technical Mentor — Backend Engineering &amp; AI Applications</span>
+                <span class="entry-dates">2023 – Present</span>
+            </div>
+            <div class="entry-detail">Provided mentorship to junior developers on Python programming, Django/FastAPI frameworks, 
+                software architecture best practices, and introductory machine learning concepts.</div>
+        </div>
+
+        <!-- ═══════════════ CERTIFICATES ═══════════════ -->
+        <h2 class="section-title">Professional Development</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Supervised Machine Learning: Regression and Classification</span>
+                <span class="entry-dates">Jun 2023</span>
+            </div>
+            <div class="entry-subtitle">DeepLearning.AI &amp; Stanford University (Coursera)</div>
+            <div class="entry-detail"><a href="https://coursera.org/verify/NE9J992CQKPG">[Certificate]</a></div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Web Application Technologies and Django</span>
+                <span class="entry-dates">Jul 2022</span>
+            </div>
+            <div class="entry-subtitle">University of Michigan (Coursera)</div>
+            <div class="entry-detail"><a href="https://coursera.org/verify/6GQB8GWAEPCW">[Certificate]</a></div>
+        </div>
+
+        <!-- ═══════════════ TECHNICAL SKILLS ═══════════════ -->
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+            <div class="skill-group">
+                <strong>Programming Languages</strong><br>
+                Python (expert), Rust (familiar), SQL
+            </div>
+            <div class="skill-group">
+                <strong>Computer Vision</strong><br>
+                OpenCV, torchvision, PIL/Pillow, MediaPipe, YOLO, Image Segmentation, SAM, Object Detection, Pose Estimation, Diffusion Models, ONNX, TensorRT, Motion Recognition, Temporal Action Detection
+            </div>
+            <div class="skill-group">
+                <strong>ML &amp; AI Frameworks</strong><br>
+                PyTorch, Scikit‑learn, LangChain, LlamaIndex, Pandas, NumPy, Matplotlib
+            </div>
+            <div class="skill-group">
+                <strong>Backend &amp; APIs</strong><br>
+                Django/DRF, FastAPI, Flask, WebSockets (Channels/Tornado), Celery, RabbitMQ
+            </div>
+            <div class="skill-group">
+                <strong>Databases &amp; Storage</strong><br>
+                PostgreSQL, MongoDB, Redis, ElasticSearch, Vector DBs (PGvector, Qdrant)
+            </div>
+            <div class="skill-group">
+                <strong>DevOps &amp; Cloud</strong><br>
+                Docker, Kubernetes, CI/CD, AWS Infrastructure, Linux, Grafana, Sentry
+            </div>
+            <div class="skill-group">
+                <strong>Specialized Domains</strong><br>
+                RAG Systems, Multimodal AI, Computer Vision, Data Mining, Distributed Systems, Blockchain Protocols
+            </div>
+        </div>
+
+        <!-- ═══════════════ LANGUAGES ═══════════════ -->
+        <h2 class="section-title">Languages</h2>
+        <p style="font-size:0.82em; margin-bottom:3mm;">
+            <strong>Persian</strong> (Native) &nbsp;·&nbsp; 
+            <strong>English</strong> (Professional Working Proficiency)
+        </p>
+
+    </div>
+
+    <!-- Print button -->
+    <button class="print-btn" onclick="printCV()">Print Academic CV</button>
+
+</body>
+</html>
