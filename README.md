@@ -1,4 +1,4 @@
-# Mostafa Shahbazi Dill
+# Mostafa Shahbazi Dil
 
 Email: [mostafas105@gmail.com](mailto:mostafas105@gmail.com) | Phone: (+98)9217149545  
 Location: Tehran, Iran  
@@ -6,7 +6,7 @@ LinkedIn: [mostafa-shahbazi](https://www.linkedin.com/in/mostafa-shahbazi/) | Gi
 
 ## Profile Summary
 
-A specialized Backend Developer and AI Engineer with over 8 years of expertise in building robust Python-based systems and AI solutions (on AWS infrastructure and services). Currently pursuing a Master's in Computer Science with a focus on Artificial Intelligence, bringing academic depth to practical AI implementations. Extensive experience in developing and deploying machine learning models, deep neural networks, and real-time data processing systems. Proven expertise in architecting scalable backend infrastructures using Django, FastAPI, and WebSocket technologies, with a strong focus on high-performance distributed systems. Skilled in implementing AI-powered solutions including computer vision systems, predictive models, and NLP applications. Proficient in backend best practices including asynchronous programming, microservices architecture, and DevOps workflows with Docker and Kubernetes. Experienced in integrating AWS cloud AI services and cloud-native deployment pipelines to deliver resilient, production-ready solutions. Successfully led technical teams in delivering complex AI integrations and backend systems for enterprise-scale applications.
+A specialized Backend Developer and AI Engineer with over 8 years of expertise in building robust Python-based systems and AI solutions (on AWS infrastructure and services). Holds a Master's in Computer Science with a focus on Artificial Intelligence, bringing academic depth to practical AI implementations. Extensive experience in developing and deploying machine learning models, deep neural networks, and real-time data processing systems. Proven expertise in architecting scalable backend infrastructures using Django, FastAPI, and WebSocket technologies, with a strong focus on high-performance distributed systems. Skilled in implementing AI-powered solutions including computer vision systems, predictive models, and NLP applications. Proficient in backend best practices including asynchronous programming, microservices architecture, and DevOps workflows with Docker and Kubernetes. Experienced in integrating AWS cloud AI services and cloud-native deployment pipelines to deliver resilient, production-ready solutions. Successfully led technical teams in delivering complex AI integrations and backend systems for enterprise-scale applications.
 
 ### Keywords
 
@@ -15,6 +15,13 @@ A specialized Backend Developer and AI Engineer with over 8 years of expertise i
 - Backend Development, Team Leadership, Microservices, Real-time Systems, Distributed Systems
 - Database Design, Cloud Computing, DevOps, Containerization, Software Architecture, System Integration
 - Blockchain Technologies, AWS Infrastructure
+
+## Publications
+
+- **M. Shahbazi Dil**, M. Mahmoudabadi, M. Rezghi. "DuoDiT: A Parameter-Efficient Dual-Stream Architecture for Image Generation in Diffusion Transformers." *Multimedia Tools and Applications* (Springer), vol. 85, art. 780, 2026. [DOI](https://doi.org/10.1007/s11042-026-21926-y)
+- A. Hoseinzade, **M. Shahbazi Dil**, M. Mahmoudabadi, M. Rezghi. "MarineMamba: Multi-Granularity CLIP Feature Integration with Dual Mamba for Underwater Classification." *ECCV 2026 Workshops (2nd Workshop on Marine Vision)*. [OpenReview](https://openreview.net/forum?id=rCrRa9yBDQ) | [Code](https://github.com/alirezahos78/MarineMamba)
+
+Full list: [Google Scholar](https://scholar.google.com/citations?user=Jhoaz_MAAAAJ&hl=en) | [ORCID](https://orcid.org/0009-0002-4891-3506)
 
 ## Work Experience
 
@@ -119,7 +126,8 @@ A specialized Backend Developer and AI Engineer with over 8 years of expertise i
 
 ### Master of Computer Science (Data Mining and Artificial Intelligence)
 
-**Tarbiat Modares University, Tehran, Iran** | 2023 – Present
+**Tarbiat Modares University, Tehran, Iran** | 2023 – 2026  
+Thesis: *DuoDiT: A Parameter-Efficient Dual-Stream Architecture for Image Generation in Diffusion Transformers* (published in Springer MTAP)
 
 ### Bachelor of Civil Engineering
 

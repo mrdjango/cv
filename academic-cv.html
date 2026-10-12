@@ -130,6 +130,20 @@
         .pub-authors {
             font-size: 0.82em;
         }
+        .pub-group {
+            font-size: 0.84em;
+            font-weight: 700;
+            font-style: italic;
+            color: #2c3e50;
+            margin: 2.5mm 0 1.5mm 0;
+        }
+        .pub-note {
+            font-size: 0.78em;
+            color: #555;
+            margin: 0.8mm 0 0 6mm;
+            line-height: 1.45;
+            text-align: justify;
+        }
         .pub-authors .self {
             font-weight: 700;
             text-decoration: underline;
@@ -231,16 +245,20 @@
             <div class="contact-line" style="margin-top:1.5mm;">
                 <span><a href="https://www.linkedin.com/in/mostafa-shahbazi/">LinkedIn</a></span>
                 <span><a href="https://github.com/mrdjango">GitHub</a></span>
+                <span><a href="https://scholar.google.com/citations?user=Jhoaz_MAAAAJ&amp;hl=en">Google Scholar</a></span>
+                <span><a href="https://orcid.org/0009-0002-4891-3506">ORCID: 0009-0002-4891-3506</a></span>
             </div>
         </div>
 
         <!-- ═══════════════ RESEARCH INTERESTS ═══════════════ -->
         <h2 class="section-title">Research Interests</h2>
         <p class="research-interests">
-            Computer Vision · Deep Learning · Image Generation &amp; Synthesis · Object Detection &amp; Segmentation · 
-            Pose Estimation &amp; Human Activity Recognition · Image Restoration &amp; Enhancement · 
-            Diffusion Models &amp; Generative AI · Multimodal Learning &amp; Vision-Language Models · 
-            Edge AI &amp; Efficient On-Device Vision · Retrieval-Augmented Generation (RAG) · Representation Learning
+            My research centres on <strong>parameter-efficient adaptation of large pretrained vision models</strong>:
+            reusing frozen foundation backbones (diffusion transformers, CLIP) and training lightweight, purpose-built modules
+            to reach strong accuracy at a small fraction of the trainable parameters.
+            <span style="display:block; margin-top:1.5mm; text-align:left;">Diffusion Models &amp; Diffusion Transformers · Parameter-Efficient Fine-Tuning · State Space Models (Mamba) ·
+            Vision-Language Models (CLIP) · Fine-Grained &amp; Underwater Visual Recognition · Image Restoration &amp; Enhancement ·
+            Efficient On-Device Vision (Edge AI) · Multimodal Retrieval (RAG)</span>
         </p>
 
         <!-- ═══════════════ EDUCATION ═══════════════ -->
@@ -252,8 +270,12 @@
                 <span class="entry-dates">2023 – 2026</span>
             </div>
             <div class="entry-subtitle">Tarbiat Modares University, Tehran, Iran</div>
+            <div class="entry-detail"><strong>Thesis:</strong> &#8220;DuoDiT: A Parameter-Efficient Dual-Stream Architecture for Image Generation in Diffusion Transformers&#8221;, published as journal article [J1].</div>
             <div class="entry-detail">Relevant Coursework: Machine Learning, Deep Learning, Computer Vision, Data Mining, Natural Language Processing, 
                 Statistical Pattern Recognition, Optimization Methods, Advanced Algorithms, Complex Networks</div>
+            <ul>
+                <li>Research on parameter-efficient generative and discriminative vision models with Dr. Mansoor Rezghi and Mohammad Mahmoudabadi. The thesis became a first-author Springer MTAP article, and related work produced an ECCV 2026 workshop paper.</li>
+            </ul>
         </div>
 
         <div class="entry">
@@ -267,22 +289,32 @@
         <!-- ═══════════════ PUBLICATIONS ═══════════════ -->
         <h2 class="section-title">Publications</h2>
 
+        <div class="pub-group">Journal Articles</div>
+
         <div class="pub-item">
-            <div class="pub-authors"><span class="self">Mostafa Shahbazi Dil</span>, Mohammad Mahmoudabadi, Mansoor Rezghi. &#8220;DuoDiT: A Parameter-Efficient Dual-Stream Architecture for High-Resolution Image Generation in Diffusion Transformers&#8221;. <em>Multimedia Tools and Applications</em>. Springer, Submitted 2026.</div>
+            <div class="pub-authors">[J1] <span class="self">Mostafa Shahbazi Dil</span>, Mohammad Mahmoudabadi, Mansoor Rezghi.
+                &#8220;DuoDiT: A Parameter-Efficient Dual-Stream Architecture for Image Generation in Diffusion Transformers.&#8221;
+                <em>Multimedia Tools and Applications</em> (Springer), vol. 85, art. 780, 2026.
+                Topical collection: <em>Rich Media with Generative AI: Creation, Control, and Efficient Representation</em>.
+                <a href="https://doi.org/10.1007/s11042-026-21926-y">[DOI]</a></div>
+            <div class="pub-note">Adds a lightweight, content-aware local-refinement stream to a frozen DiT backbone while preserving its global denoising prior.
+                On ImageNet-1K 256&times;256 class-conditional generation, DuoDiT-200 trains only 17.95M of 690.39M parameters (2.6%) and reaches FID 2.219, KID 0.0014.</div>
+        </div>
+
+        <div class="pub-group">Conference &amp; Workshop Papers</div>
+
+        <div class="pub-item">
+            <div class="pub-authors">[C1] Alireza Hoseinzade, <span class="self">Mostafa Shahbazi Dil</span>, Mohammad Mahmoudabadi, Mansoor Rezghi.
+                &#8220;MarineMamba: Multi-Granularity CLIP Feature Integration with Dual Mamba for Underwater Classification.&#8221;
+                <em>2nd Workshop on Marine Vision, European Conference on Computer Vision Workshops (ECCV 2026)</em>, Malm&ouml;, Sweden, Sep. 2026.
+                <a href="https://openreview.net/forum?id=rCrRa9yBDQ">[OpenReview]</a>
+                <a href="https://github.com/alirezahos78/MarineMamba">[Code]</a></div>
+            <div class="pub-note">Frozen CLIP ViT-B/16 and ViT-B/32 backbones with a dual-branch Mamba head (bidirectional spiral scan and global-feature injection).
+                Reaches 93.46% / 95.90% top-1 on AQUA20 / Sea Animals 23 with 1.03M trainable parameters, compared with 6.96M for a fine-tuned Vim-tiny baseline.</div>
         </div>
 
         <!-- ═══════════════ RESEARCH PROJECTS ═══════════════ -->
         <h2 class="section-title">Research Projects</h2>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="entry-title">Image Denoising via SVD Reconstruction &amp; Local Thresholding</span>
-            </div>
-            <div class="entry-detail">
-                Investigated noise removal techniques through singular value decomposition (SVD) and local thresholding for image reconstruction. 
-                <a href="https://github.com/mrdjango/Experimental-Image-Denoising-using-SVD-Reconstruction-and-Local-Thresholding">[GitHub]</a>
-            </div>
-        </div>
 
         <div class="entry">
             <div class="entry-header">
@@ -298,34 +330,22 @@
 
         <div class="entry">
             <div class="entry-header">
-                <span class="entry-title">Multi-Layer Perceptron with Modular Optimization</span>
+                <span class="entry-title">Image Denoising via SVD Reconstruction &amp; Local Thresholding</span>
             </div>
             <div class="entry-detail">
-                Implemented a configurable MLP framework with layer stacking, various normalization techniques (BatchNorm, LayerNorm), 
-                regularization methods (Dropout, L1/L2), and multiple optimizer strategies. 
-                <a href="https://github.com/mrdjango/MLP-with-optimizer">[GitHub]</a>
+                Investigated noise removal techniques through singular value decomposition (SVD) and local thresholding for image reconstruction. 
+                <a href="https://github.com/mrdjango/Experimental-Image-Denoising-using-SVD-Reconstruction-and-Local-Thresholding">[GitHub]</a>
             </div>
         </div>
 
         <div class="entry">
             <div class="entry-header">
-                <span class="entry-title">Convolutional Neural Networks: Kernel-Based Image Processing</span>
+                <span class="entry-title">Course Projects</span>
             </div>
             <div class="entry-detail">
-                Implemented CNN convolution operations from first principles using NumPy; demonstrated edge detection and 
-                image blur through custom kernel filters on benchmark datasets. 
-                <a href="https://github.com/mrdjango/Convolution-Kernel-Blur-Image">[GitHub]</a>
-            </div>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span class="entry-title">Unsupervised Foreground–Background Segmentation via K-Means Clustering</span>
-            </div>
-            <div class="entry-detail">
-                Applied K-means clustering for unsupervised image segmentation, separating foreground objects 
-                from background scenes without labeled training data. 
-                <a href="https://github.com/mrdjango/Separate-Foreground-Background-Clustering.git">[GitHub]</a>
+                Configurable MLP with BatchNorm/LayerNorm, Dropout, L1/L2 and multiple optimizers <a href="https://github.com/mrdjango/MLP-with-optimizer">[GitHub]</a> ·
+                NumPy convolution from first principles for edge detection and blurring <a href="https://github.com/mrdjango/Convolution-Kernel-Blur-Image">[GitHub]</a> ·
+                Unsupervised foreground–background segmentation with K-means <a href="https://github.com/mrdjango/Separate-Foreground-Background-Clustering">[GitHub]</a>
             </div>
         </div>
 
@@ -363,7 +383,7 @@
             </ul>
         </div>
 
-        <!-- ═══════════════ INDUSTRY RESEARCH EXPERIENCE ═══════════════ -->
+        <!-- ═══════════════ INDUSTRY EXPERIENCE ═══════════════ -->
         <h2 class="section-title">Applied Research &amp; Industry Experience</h2>
 
         <div class="entry">
@@ -446,11 +466,11 @@
             </div>
             <div class="skill-group">
                 <strong>Computer Vision</strong><br>
-                OpenCV, torchvision, PIL/Pillow, MediaPipe, YOLO, Image Segmentation, SAM, Object Detection, Pose Estimation, Diffusion Models, ONNX, TensorRT, Motion Recognition, Temporal Action Detection
+                Diffusion Transformers (DiT), CLIP, Vision Mamba / State Space Models, ViT, YOLO, SAM, MediaPipe, OpenCV, torchvision, Pose Estimation, Temporal Action Detection
             </div>
             <div class="skill-group">
                 <strong>ML &amp; AI Frameworks</strong><br>
-                PyTorch, Scikit‑learn, LangChain, LlamaIndex, Pandas, NumPy, Matplotlib
+                PyTorch, Parameter-Efficient Fine-Tuning (LoRA, QLoRA, adapters), ONNX, TensorRT, INT8/FP16 Quantization, Scikit‑learn, LangChain, LlamaIndex, Pandas, NumPy, Matplotlib
             </div>
             <div class="skill-group">
                 <strong>Backend &amp; APIs</strong><br>
@@ -466,7 +486,7 @@
             </div>
             <div class="skill-group">
                 <strong>Specialized Domains</strong><br>
-                RAG Systems, Multimodal AI, Computer Vision, Data Mining, Distributed Systems, Blockchain Protocols
+                Generative Model Evaluation (FID, KID, LPIPS, PSNR, SSIM), RAG Systems, Multimodal AI, Data Mining, Distributed Systems
             </div>
         </div>
 
