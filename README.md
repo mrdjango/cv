@@ -2,7 +2,8 @@
 
 Email: [mostafas105@gmail.com](mailto:mostafas105@gmail.com) | Phone: (+98)9217149545  
 Location: Tehran, Iran  
-LinkedIn: [mostafa-shahbazi](https://www.linkedin.com/in/mostafa-shahbazi/) | GitHub: [mrmc-mc](https://github.com/mrmc-mc), [mrdjango](https://github.com/mrdjango)
+LinkedIn: [mostafa-shahbazi](https://www.linkedin.com/in/mostafa-shahbazi/) | GitHub: [mrmc-mc](https://github.com/mrmc-mc), [mrdjango](https://github.com/mrdjango)  
+Google Scholar: [Mostafa Shahbazi Dil](https://scholar.google.com/citations?user=Jhoaz_MAAAAJ&hl=en) | ORCID: [0009-0002-4891-3506](https://orcid.org/0009-0002-4891-3506)
 
 ## Profile Summary
 
