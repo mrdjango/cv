@@ -7,12 +7,13 @@ Google Scholar: [Mostafa Shahbazi Dil](https://scholar.google.com/citations?user
 
 ## Profile Summary
 
-A specialized Backend Developer and AI Engineer with over 8 years of expertise in building robust Python-based systems and AI solutions (on AWS infrastructure and services). Holds a Master's in Computer Science with a focus on Artificial Intelligence, bringing academic depth to practical AI implementations. Extensive experience in developing and deploying machine learning models, deep neural networks, and real-time data processing systems. Proven expertise in architecting scalable backend infrastructures using Django, FastAPI, and WebSocket technologies, with a strong focus on high-performance distributed systems. Skilled in implementing AI-powered solutions including computer vision systems, predictive models, and NLP applications. Proficient in backend best practices including asynchronous programming, microservices architecture, and DevOps workflows with Docker and Kubernetes. Experienced in integrating AWS cloud AI services and cloud-native deployment pipelines to deliver resilient, production-ready solutions. Successfully led technical teams in delivering complex AI integrations and backend systems for enterprise-scale applications.
+AI Engineer and computer vision researcher with 8+ years of Python engineering experience, from high-throughput backend systems to production AI. M.Sc. in Computer Science (Data Mining & AI), Tarbiat Modares University. First author of a Springer journal article (*DuoDiT*, Multimedia Tools and Applications, 2026) and co-author of an ECCV 2026 workshop paper (*MarineMamba*), both on parameter-efficient adaptation of large vision models such as diffusion transformers and CLIP. Builds multimodal RAG systems, vision-language pipelines and real-time computer vision on edge devices, deployed on AWS with Docker, Kubernetes and CI/CD. Has led backend and AI teams delivering enterprise-scale systems.
 
 ### Keywords
 
 - Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Natural Language Processing
-- AI Integration, AI Solutions, AI Applications, Data Processing, Hybrid Search Engine
+- Diffusion Models, Generative AI, Parameter-Efficient Fine-Tuning
+- AI Integration, Data Processing, Hybrid Search Engine
 - Backend Development, Team Leadership, Microservices, Real-time Systems, Distributed Systems
 - Database Design, Cloud Computing, DevOps, Containerization, Software Architecture, System Integration
 - Blockchain Technologies, AWS Infrastructure
